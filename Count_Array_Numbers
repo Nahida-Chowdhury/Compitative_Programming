@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main() {
+    int arr[] = {1, 2, 3, 1, 2, 4, 1, 3, 5, 4};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    int counts[size] = {0};
+
+    // Count occurrences of each number
+    for (int i = 0; i < size; ++i) {
+        counts[arr[i]]++;
+    }
+
+    // Display the counts
+    std::cout << "Number\tCount\n";
+    for (int i = 0; i < size; ++i) {
+        if (counts[i] > 0) {
+            std::cout << i << "\t" << counts[i] << "\n";
+        }
+    }
+
+    return 0;
+}
